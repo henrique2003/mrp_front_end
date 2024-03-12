@@ -1,0 +1,12 @@
+/node_modules
+/public
+tsconfig.json
+tailwind.config.ts
+postcss.config.js
+package.json
+package-lock.json
+next.config.mjs
+next-env.d.ts
+.gitignore
+.editorconfig
+.eslintrc.js
