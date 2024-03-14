@@ -11,3 +11,4 @@ next-env.d.ts
 .editorconfig
 .eslintrc.js
 .lintstagedrc.json
+/src/components/core/ui
