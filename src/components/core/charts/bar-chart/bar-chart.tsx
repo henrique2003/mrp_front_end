@@ -3,13 +3,10 @@
 import { ResponsiveBar } from '@nivo/bar'
 import { type DetailedHTMLProps, type HTMLAttributes } from 'react'
 
-type IBarChartProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
-  data: IBarChartData[]
-}
+import { type IChartData } from './bar-chart-types'
 
-export type IBarChartData = {
-  name: string
-  count: number
+type IBarChartProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
+  data: IChartData[]
 }
 
 export const BarChart: React.FC<IBarChartProps> = ({ data, ...props }) => {
@@ -17,7 +14,7 @@ export const BarChart: React.FC<IBarChartProps> = ({ data, ...props }) => {
     <div {...props}>
       <ResponsiveBar
         data={data}
-        keys={['count']}
+        keys={['total']}
         indexBy="name"
         margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
         padding={0.3}

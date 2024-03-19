@@ -5,7 +5,8 @@ module.exports = {
       extends: 'standard-with-typescript',
       rules: {
         "@typescript-eslint/space-before-function-paren": "off",
-        "@typescript-eslint/consistent-type-definitions": "off"
+        "@typescript-eslint/consistent-type-definitions": "off",
+        "array-callback-return": "off"
       }
     }
   ]
