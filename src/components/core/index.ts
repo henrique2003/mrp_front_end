@@ -1,2 +1,6 @@
 export * from './ui'
-export * from './sidebar'
+export * from './sidebar/sidebar'
+export * from './navbar'
+export * from './container'
+export * from './charts'
+export * from './data-table/data-table'
