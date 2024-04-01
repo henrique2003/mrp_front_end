@@ -17,7 +17,7 @@ type INavbarProps = {
 
 export const Navbar: React.FC<INavbarProps> = ({ icon, title, handleToggleAside }) => {
   return (
-    <nav className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+    <nav className="flex min-h-[60px] lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
       <Link className="lg:hidden" href="#">
         {icon}
         <span className="sr-only">{title}</span>

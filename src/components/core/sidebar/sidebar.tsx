@@ -1,4 +1,4 @@
-import { AlignHorizontalDistributeCenter, CircuitBoard, Container } from 'lucide-react'
+import { AlignHorizontalDistributeCenter, BrickWall, CircuitBoard, Container } from 'lucide-react'
 import Link from 'next/link'
 import { SidebarLinkItem } from './components'
 import { twMerge } from 'tailwind-merge'
@@ -28,16 +28,24 @@ export const SideBar: React.FC<ISideBarProps> = ({ open, handleBlurAside }) => {
           </div>
           <div className="flex-1 overflow-auto py-2">
             <nav className="grid items-start px-4 text-sm font-medium gap-2">
+              <div className='flex flex-col gap-2'>
+                <SidebarLinkItem
+                  href='/estoque'
+                  icon={<Container className='h-4 w-4' />}
+                  description='Estoque'
+                  focus
+                />
+                <SidebarLinkItem
+                  href='/estoque/materiais'
+                  icon={<BrickWall className='h-4 w-4' />}
+                  description='Materiais'
+                  className='pl-7'
+                />
+              </div>
               <SidebarLinkItem
-                href='/estoque'
-                icon={<Container className='h-4 w-4' />}
-                description='Estoque'
-                focus
-              />
-              <SidebarLinkItem
-                href='/fabrica'
+                href='/mrp'
                 icon={<CircuitBoard className='h-4 w-4' />}
-                description='Fábrica'
+                description='Mrp'
               />
             </nav>
           </div>

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Navbar, SideBar } from './index'
 
 type IContainerProps = {
-  children: JSX.Element
+  children: React.ReactNode
   title: string
   icon: JSX.Element
 }
@@ -25,7 +25,9 @@ export const Container: React.FC<IContainerProps> = ({ children, icon, title }) 
       <SideBar open={asideOpen} handleBlurAside={handleBlurAside} />
       <div className="flex flex-col w-full relative z-10">
         <Navbar title={title} icon={icon} handleToggleAside={handleToggleAside} />
-        {children}
+        <div className='p-4 px-6 pb-10 w-full h-full'>
+          {children}
+        </div>
       </div>
     </div>
   )

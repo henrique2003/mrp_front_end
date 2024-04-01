@@ -1,5 +1,5 @@
-import { Dashboard } from '@/components/modules'
+import { redirect } from 'next/navigation'
 
 export default function Home(): JSX.Element {
-  return <Dashboard />
+  redirect('/estoque')
 }
