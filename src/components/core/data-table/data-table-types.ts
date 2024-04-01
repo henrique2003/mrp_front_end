@@ -7,8 +7,10 @@ export type IDataTableRow = {
   data: IDataTableRowData[]
 }
 
+export type IDataTableDataText = string | number | React.ReactNode | null
+
 export type IDataTableRowData = {
-  text: string | number
+  text: IDataTableDataText
   mobileShow: boolean
   styles?: IDataTableRowDataStyles
 }

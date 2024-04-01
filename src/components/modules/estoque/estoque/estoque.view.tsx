@@ -7,15 +7,16 @@ import {
   Container,
   BarChart,
   BumpChart,
-  DataTable
+  DataTable,
+  PlusLink
 } from '@/components/core'
 
 import { purchaseOrder, stockData, stockHeader, stockInTransitData } from '@/mocks'
 
-export function Dashboard(): JSX.Element {
+export function EstoqueView(): JSX.Element {
   return (
     <Container title='Estoque' icon={<ContainerIcon className="h-6 w-6" />}>
-      <main className="flex flex-1 flex-col gap-4 p-4">
+      <div className="flex flex-1 flex-col gap-4">
         <div className="flex flex-col gap-4 w-full">
           <div className="flex gap-4 max-md:flex-col">
             <Card>
@@ -43,9 +44,11 @@ export function Dashboard(): JSX.Element {
             title='Lista de Estoques'
             headers={stockHeader}
             rows={stockData}
-          />
+          >
+            <PlusLink href='/estoque/criar' />
+          </DataTable>
         </div>
-      </main>
+      </div>
     </Container>
   )
 }
